@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CarHub - Sign In</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1000px;
+            height: 600px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+        }
+
+        .image-side {
+            flex: 1;
+            background: url('images/lambo.jpg') no-repeat center center/cover;
+        }
+
+        .form-side {
+            flex: 1;
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 40px;
+        }
+
+        .form-side h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            color: #ccc;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #ff9900;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #ffaa22;
+        }
+
+        .form-side a {
+            text-align: center;
+            margin-top: 15px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .form-side a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-side {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-side"></div>
+
+        <div class="form-side">
+            <h2>Sign In to CarHub</h2>
+           <form onsubmit="handleSignin(event)">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Sign In">
+                </div>
+            </form>
+            <a href="signup.html">Don't have an account? Sign up</a>
+            
+        </div>
+    </div>
+
+</body>
+<script>
+  function handleSignin(event) {
+    event.preventDefault();
+    window.location.href = "home.html";
+  }
+</script>
+
+</html>

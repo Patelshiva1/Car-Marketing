@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagani Utopia</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    h1 a {
+      color: white;
+      text-decoration: none;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .gallery, .interior-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .gallery img {
+      width: 45%;
+      max-width: 600px;
+      min-width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      animation: fadeInZoom 1s ease both;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08) rotateZ(1deg) translateY(-20);
+      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
+    }
+    .gallery img, .interior-images img {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInZoom 0.8s ease forwards;
+  animation-delay: var(--delay, 0s);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover, .interior-images img:hover {
+  transform: scale(1.1) rotateZ(1deg) translateY(-10px);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+    .interior-images img {
+      width: 30%;
+      min-width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeInZoom 1s ease both;
+      cursor: pointer;
+    }
+
+    .interior-images img:hover {
+      transform: scale(1.05) translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeInZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .description {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .description h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .description a {
+      color: #c00000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .description a:hover {
+      text-decoration: underline;
+    }
+
+    .interior-gallery {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .interior-gallery h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1a1a1a;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="https://www.pagani.com/pagani-utopia/" target="_blank">Pagani Utopia</a></h1>
+    <p>The Art of Hypercar Engineering</p>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <img src="pagani_Utopia.jpg" alt="Pagani Top View" title="Pagani Top View" />
+      <img src="pagani-utopia.jpg" alt="Pagani Utopia Side View" title="Pagani Side View" />
+    </section>
+
+    <section class="description">
+      <h2>About the Pagani Utopia</h2>
+      <p>Learn more about the <a href="https://www.pagani.com/pagani-utopia/" target="_blank">Utopia</a>.</p>
+      <p>The Pagani Utopia blends timeless design with cutting-edge performance. 
+      Powered by a twin-turbocharged V12 engine, it delivers raw power with a driving experience that's second to none.</p>
+    </section>
+
+    <section class="interior-gallery">
+      <h2>Interior Highlights</h2>
+      <div class="interior-images">
+        <img src="p-g.jpg" alt="Pagani Interior Seats" title="Interior Seats" />
+        <img src="P-interior.jpg" alt="Pagani Dashboard and Steering" title="Dashboard and Steering" />
+        <img src="p-interiors.jpg" alt="Pagani Gear Shifter" title="Gear Shifter" />
+      </div>
+    </section>
+  </main>
+  <section class="description">
+  <h2>Pagani Utopia Roadster</h2>
+  <p>The Pagani Utopia Roadster takes open-air hypercar performance to exhilarating new heights. 
+  With its iconic twin-turbo V12 engine, lightweight carbon fiber body, and timeless Italian craftsmanship, 
+  it delivers an unmatched blend of raw power and refined elegance. Experience the thrill of freedom with every drive.</p>
+</section>
+
+<section class="gallery">
+
+  <img src="images/pagani2023.jpg" alt="Pagani 2023 Image" title="Pagani 2023" />
+  <img src="images/p-di.jpg" alt="Pagani Detail Image" title="Pagani Detail" />
+</section>
+<section class="interior-gallery">
+  <h2>Exclusive Utopia Close-Ups</h2>
+  <div class="interior-images">
+  <img src="images/p-2024-g.jpg" alt="Pagani Gear Close-up" title="Pagani Gear Detail" />
+<img src="images/p-2024-steer.jpg" alt="Pagani Steering Detail" title="Pagani Steering Close-up" />
+<img src="images/roadster.jpg" alt="Pagani Seats details" title="Pagani seats" />
+
+</section>
+<section class="description">
+  <h2>About the Pagani Utopia Roadster</h2>
+  <p>Learn more about the <a href="https://www.pagani.com/pagani-utopia/" target="_blank">Utopia Roadster</a>.</p>
+  <p>
+    The Pagani Utopia Roadster combines open-air freedom with hypercar engineering excellence.
+    Crafted with a carbon-titanium monocoque and powered by a twin-turbocharged V12 engine, it offers the same thrilling performance of the coupé with the added exhilaration of roofless driving.
+  </p>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Pagani Automobili. All rights reserved.</p>
+  </footer>
+</body>
+</html>

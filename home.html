@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CarHub - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #111;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 36px;
+      font-weight: bold;
+      color: #ff9900;
+      letter-spacing: 2px;
+    }
+
+    .car-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .car-box {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 20px 0;
+      animation: slideIn 0.6s ease forwards;
+      opacity: 0;
+      transform: translateX(-40px);
+      cursor: pointer;
+    }
+
+    .car-box a {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .car-box img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .car-box:hover img {
+      transform: scale(1.05);
+      z-index: 10;
+    }
+
+    .car-name {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      color: rgb(248, 247, 247);
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 28px;
+        padding: 20px;
+      }
+
+      .car-box {
+        width: 95%;
+      }
+
+      .car-name {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>CarHub Gallery</header>
+
+  <div class="car-section">
+    <div class="car-box">
+      <a href="pagani.html">
+        <img src="images/pagani.jpg" alt="Pagani" />
+        <div class="car-name">Pagani</div>
+      </a>
+    </div>
+
+    <div class="car-box">
+      <a href="lamborgini.html">
+        <img src="images/lamborgini.jpg" alt="Lamborghini" />
+        <div class="car-name">Lamborghini</div>
+      </a>
+    </div>
+
+    <div class="car-box">
+      <a href="bugatti.html">
+        <img src="images/bugatti.jpg" alt="Bugatti" />
+        <div class="car-name">Bugatti</div>
+      </a>
+    </div>
+
+    <div class="car-box">
+      <a href="porsche.html">
+        <img src="images/porsche.jpg" alt="Porsche" />
+        <div class="car-name">Porsche</div>
+      </a>
+    </div>
+
+    <div class="car-box">
+      <a href="benz.html">
+        <img src="images/benz.jpg" alt="Mercedes Benz" />
+        <div class="car-name">Mercedes Benz</div>
+      </a>
+    </div>
+
+    <div class="car-box">
+      <a href="bmw.html">
+        <img src="images/bmw.jpg" alt="BMW" />
+        <div class="car-name">BMW</div>
+      </a>
+    </div>
+
+    <div class="car-box">
+      <a href="audi.html">
+        <img src="images/audi.jpg" alt="Audi" />
+        <div class="car-name">Audi</div>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
